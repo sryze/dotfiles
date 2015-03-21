@@ -1,0 +1,14 @@
+[core]
+	editor = gvim -f
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
+[alias]
+	re = rebase
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
+	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all

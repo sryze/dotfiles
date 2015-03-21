@@ -1,0 +1,17 @@
+# Backup files created by various editors
+*~
+*.bak
+
+# Vim swap files
+*.swp
+
+# KDevelop4 project files
+*.kdev4
+
+# QtCreator project configuration files
+*.user
+*.user.*
+
+# ctags and cscope outputs
+tags
+cscope.out
