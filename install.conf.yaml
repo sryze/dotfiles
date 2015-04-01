@@ -1,11 +1,11 @@
 - clean: [~]
 
 - link:
-  ~/.bashrc: bashrc
-  ~/.gitconfig: gitconfig
-  ~/.gitignore: gitignore
-  ~/.vim: vim/
-  ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
