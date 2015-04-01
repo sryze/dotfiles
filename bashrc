@@ -107,6 +107,7 @@ if [ "$TERM" != "linux" ]; then
 fi
 
 # Set up Powerline for Bash.
+export PATH="$PATH:$HOME/.local/bin"
 export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
 export POWERLINE_BASH_CONTINUATION=1
 export POWERLINE_BASH_SELECT=1
