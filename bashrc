@@ -119,3 +119,6 @@ powerline-daemon -q
 #if [ -z "$TMUX" ]; then
 #    tmux attach
 #fi
+
+# The Fuck: https://github.com/nvbn/thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
