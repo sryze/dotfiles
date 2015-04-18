@@ -15,3 +15,6 @@
 # ctags and cscope outputs
 tags
 cscope.out
+
+# File locks
+*.*lock*
