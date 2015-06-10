@@ -1,11 +1,33 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+
+Bundle 'gmarik/Vundle.vim'
+Bundle 'ruscmd'
+Bundle 'DetectIndent'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'eparreno/vim-l9'
+Bundle 'taghighlight', {'pinned': 1}
+
+" Syntax support
+Bundle 'vim-less'
+
+" Color schemes
+Bundle '29decibel/codeschool-vim-theme'
+Bundle 'darkspectrum'
+Bundle 'veloce/vim-aldmeris'
+Bundle 'darktango.vim'
+Bundle 'jonathanfilip/vim-lucius'
+Bundle 'chriskempson/base16-vim'
+
 syntax on
-filetype plugin on
-filetype indent on
+filetype on
 
 set nocompatible
 set nobackup
 set nowrap
-set autochdir
+set noautochdir
 set cursorline
 set number
 set ignorecase
@@ -18,12 +40,12 @@ set shiftwidth=2
 set expandtab
 set colorcolumn=80
 set autoindent
-set smartindent
-set copyindent
-set cindent
 set preserveindent
 set foldmethod=manual
 set laststatus=2
+set encoding=utf8
+set splitbelow
+set splitright
 
 set guioptions-=T
 set guioptions-=m
@@ -32,36 +54,15 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-Bundle 'gmarik/Vundle.vim'
-Bundle 'DetectIndent'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'eparreno/vim-l9'
-Bundle 'othree/vim-autocomplpop'
-Bundle 'taghighlight', {'pinned': 1}
-
-let g:Author=$USERNAME
-Bundle 'comment.vim'
-
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'darkspectrum'
-Bundle 'veloce/vim-aldmeris'
-Bundle 'darktango.vim'
-Bundle 'jonathanfilip/vim-lucius'
-
 set background=dark
-colorscheme lucius
 
 if has('gui_running')
+  colorscheme base16-ocean
   if has('gui_gtk2')
     set columns=120 lines=42
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
   elseif has('gui_win32')
-    set columns=140 lines=40
+    set columns=160 lines=45
     set guifont=Consolas:h11
   endif
 endif
@@ -77,6 +78,15 @@ if has("win32")
   " On Windows we use MinGW's make 
   set makeprg=mingw32-make
 endif
+
+" Open directory tree
+nnoremap <C-T> :NERDTree<CR>
+
+" Navigate more easily between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Search for the visually selected sequence of characters 
 vnoremap g/ y/<C-R>"<CR>
@@ -124,3 +134,12 @@ let g:clang_hl_errors = 1
 let g:clang_user_options = '-std=c++11'
 let g:clang_complete_macros = 1
 
+" Syntactic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
