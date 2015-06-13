@@ -9,12 +9,9 @@
 *.kdev4
 
 # QtCreator project configuration files
-*.user
-*.user.*
+CMakeLists.user
+CMakeLists.user.*
 
 # ctags and cscope outputs
 tags
 cscope.out
-
-# File locks
-*.*lock*
