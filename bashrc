@@ -122,3 +122,6 @@ powerline-daemon -q
 
 # The Fuck: https://github.com/nvbn/thefuck
 alias fuck='$(thefuck $(fc -ln -1))'
+
+# Tab auto-completion for grunt
+eval "$(grunt --completion=bash)"
