@@ -46,6 +46,7 @@ set laststatus=2
 set encoding=utf8
 set splitbelow
 set splitright
+set linespace=2
 
 set guioptions-=T
 set guioptions-=m
@@ -59,7 +60,7 @@ set background=dark
 if has('gui_running')
   colorscheme base16-ocean
   if has('gui_gtk2')
-    set columns=150 lines=47
+    set columns=150 lines=43
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
   elseif has('gui_win32')
     set columns=160 lines=45
