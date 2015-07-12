@@ -2,7 +2,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'gmarik/Vundle.vim'
-Bundle 'ruscmd'
 Bundle 'DetectIndent'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
@@ -66,6 +65,10 @@ if has('gui_running')
     set columns=160 lines=45
     set guifont=Consolas:h11
   endif
+else
+  colorscheme lucius
+  hi Normal  ctermbg=none
+  hi NonText ctermbg=none
 endif
 
 " Fix for backspace
