@@ -146,6 +146,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-if filereadable("$HOME/.vimrc.local")
-  source "$HOME/.vimrc.local"
+if filereadable($HOME."/.vimrc.local")
+  exec "source ".$HOME."/.vimrc.local"
 endif
