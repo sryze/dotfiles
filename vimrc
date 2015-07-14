@@ -15,10 +15,6 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'vim-less'
 
 " Color schemes
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'darkspectrum'
-Bundle 'veloce/vim-aldmeris'
-Bundle 'darktango.vim'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'chriskempson/base16-vim'
 
