@@ -8,6 +8,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'eparreno/vim-l9'
 Bundle 'taghighlight', {'pinned': 1}
+Bundle 'ervandew/supertab'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 " Syntax support
 Bundle 'vim-less'
@@ -84,7 +86,7 @@ if has("win32")
 endif
 
 " Open directory tree
-nnoremap <C-T> :NERDTree<CR>
+nnoremap <C-T> :NERDTreeTabsToggle<CR>
 
 " Navigate more easily between splits
 nnoremap <C-J> <C-W><C-J>
