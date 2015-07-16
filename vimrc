@@ -10,6 +10,7 @@ Bundle 'eparreno/vim-l9'
 Bundle 'taghighlight', {'pinned': 1}
 Bundle 'ervandew/supertab'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'tpope/vim-fugitive'
 
 " Syntax support
 Bundle 'vim-less'
@@ -51,6 +52,7 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
+set guitablabel=%N:%M%t
 
 set background=dark
 
@@ -72,6 +74,9 @@ endif
 " Fix for backspace
 set backspace=indent,eol,start
 
+" The Leader key
+let mapleader = ' '
+
 " One-button compile and run
 nnoremap <F5>  :make<CR>
 nnoremap <F9>  :SCCompile<CR>
@@ -89,6 +94,19 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Tab management and navigation
+nnoremap <C-S-T> <Esc>:tabnew<CR>
+nnoremap <C-S-W> <Esc>:tabclose<CR>
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
+noremap <Leader>6 6gt
+noremap <Leader>7 7gt
+noremap <Leader>8 8gt
+noremap <Leader>9 9gt
 
 " Search for the visually selected sequence of characters 
 vnoremap g/ y/<C-R>"<CR>
