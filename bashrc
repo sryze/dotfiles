@@ -120,8 +120,14 @@ powerline-daemon -q
 #    tmux attach
 #fi
 
+# Linuxbrew setup
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
 # The Fuck: https://github.com/nvbn/thefuck
 alias fuck='$(thefuck $(fc -ln -1))'
 
 # Tab auto-completion for grunt
 eval "$(grunt --completion=bash)"
+
