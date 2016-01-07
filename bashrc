@@ -69,8 +69,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -89,7 +87,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -114,12 +111,6 @@ export POWERLINE_BASH_SELECT=1
 powerline-daemon -q
 . "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
 
-# Attach to existing tmux session or create a new one. Add "new-session"
-# to your .tmux.conf to facilitate this.
-#if [ -z "$TMUX" ]; then
-#    tmux attach
-#fi
-
 # Linuxbrew setup
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
@@ -130,12 +121,11 @@ alias fuck='$(thefuck $(fc -ln -1))'
 
 # Tab auto-completion for grunt.
 if [ "$(command -v grunt)" ]; then
-  eval "$(grunt --completion=bash)"
+    eval "$(grunt --completion=bash)"
 fi
 
 # Execute command from a local bash config file if it exists.
-# This allows # you to separate machine-specific bash setup
-# from the generic .bashrc.
+# This allows us to separate machine-specific bash setup from .bashrc.
 if [ -f ~/.bashrc_local ]; then
-  . ~/.bashrc_local
+    . ~/.bashrc_local
 fi
