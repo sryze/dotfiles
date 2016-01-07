@@ -131,3 +131,8 @@ alias fuck='$(thefuck $(fc -ln -1))'
 # Tab auto-completion for grunt
 eval "$(grunt --completion=bash)"
 
+# Execute command from a local bash config file if it exists. This allows you 
+# to separate machine-specific bash setup from the generic .bashrc.
+if [ -f ~/.bashrc_local ]; then
+  . ~/.bashrc_local
+fi
