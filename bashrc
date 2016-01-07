@@ -128,11 +128,14 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 # The Fuck: https://github.com/nvbn/thefuck
 alias fuck='$(thefuck $(fc -ln -1))'
 
-# Tab auto-completion for grunt
-eval "$(grunt --completion=bash)"
+# Tab auto-completion for grunt.
+if [ "$(command -v grunt)" ]; then
+  eval "$(grunt --completion=bash)"
+fi
 
-# Execute command from a local bash config file if it exists. This allows you 
-# to separate machine-specific bash setup from the generic .bashrc.
+# Execute command from a local bash config file if it exists.
+# This allows # you to separate machine-specific bash setup
+# from the generic .bashrc.
 if [ -f ~/.bashrc_local ]; then
   . ~/.bashrc_local
 fi
