@@ -103,6 +103,9 @@ if [ "$TERM" != "linux" ]; then
     export TERM="xterm-256color"
 fi
 
+# Common environment variables.
+export EDITOR=vim
+
 # Set up Powerline for Bash.
 export PATH="$PATH:$HOME/.local/bin"
 export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
