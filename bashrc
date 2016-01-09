@@ -83,13 +83,8 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# The Fuck: https://github.com/nvbn/thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -103,8 +98,38 @@ if [ "$(command -v grunt)" ]; then
     eval "$(grunt --completion=bash)"
 fi
 
-# The Fuck: https://github.com/nvbn/thefuck
-alias fuck='$(thefuck $(fc -ln -1))'
+# Set PATH so it includes user's private bin if it exists.
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Set EDITOR to vim if installed, otherwise use vi (which is available
+# pretty much everywhere).
+if [ "$(command -v vim)" ]; then
+    export EDITOR=vim
+else
+    export EDITOR=vi
+fi
+
+# Powerline: statusline for Bash (https://github.com/powerline/powerline)
+# Install powerline with 'pip install --user powerline-status'.
+export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
+export POWERLINE_BASH_CONTINUATION=1
+export POWERLINE_BASH_SELECT=1
+powerline-daemon -q
+. "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
+
+# Tell the world that we can do 256 colors.
+# This is needed for tmux and possibly other things that I can't remember.
+if [ "$TERM" != "linux" ]; then
+    export TERM="xterm-256color"
+fi
+
+# Linuxbrew: https://github.com/Homebrew/linuxbrew
+# (for installing latest versions of some tools).
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 # Execute command from a local .bashrc if exists.
 if [ -f ~/.bashrc.local ]; then
