@@ -98,37 +98,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Tell the world that we can do 256 colors.
-if [ "$TERM" != "linux" ]; then
-    export TERM="xterm-256color"
-fi
-
-# Common environment variables.
-export EDITOR=vim
-
-# Set up Powerline for Bash.
-export PATH="$PATH:$HOME/.local/bin"
-export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
-export POWERLINE_BASH_CONTINUATION=1
-export POWERLINE_BASH_SELECT=1
-powerline-daemon -q
-. "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
-
-# Linuxbrew setup
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
-# The Fuck: https://github.com/nvbn/thefuck
-alias fuck='$(thefuck $(fc -ln -1))'
-
-# Tab auto-completion for grunt.
+# Bash completions for grunt (npm install -g grunt-cli).
 if [ "$(command -v grunt)" ]; then
     eval "$(grunt --completion=bash)"
 fi
 
-# Execute command from a local bash config file if it exists.
-# This allows us to separate machine-specific bash setup from .bashrc.
-if [ -f ~/.bashrc_local ]; then
-    . ~/.bashrc_local
+# The Fuck: https://github.com/nvbn/thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
+
+# Execute command from a local .bashrc if exists.
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
 fi
