@@ -113,12 +113,14 @@ fi
 
 # Powerline: statusline for Bash (https://github.com/powerline/powerline)
 # Install powerline with 'pip install --user powerline-status'.
-if [ "$(command -v powerline-daemon)" ]; then
-    export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
-    export POWERLINE_BASH_CONTINUATION=1
-    export POWERLINE_BASH_SELECT=1
-    powerline-daemon -q
-    . "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
+if [ -z "$SSH_CLIENT" ] && [ "$TERM" != "linux" ]; then
+    if [ "$(command -v powerline-daemon)" ]; then
+    	export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
+    	export POWERLINE_BASH_CONTINUATION=1
+    	export POWERLINE_BASH_SELECT=1
+    	powerline-daemon -q
+    	. "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
+    fi
 fi
 
 # Tell the world that we can do 256 colors.
