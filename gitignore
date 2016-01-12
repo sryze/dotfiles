@@ -18,3 +18,12 @@ cscope.out
 
 # clang-complete and the like
 .clang_complete
+
+# Typical Mac garbage
+.DS_Store
+
+# Xcode user data
+*xcuserdata
+
+# Local IntelliJ IDEA files
+.idea
