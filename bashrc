@@ -103,6 +103,10 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Set language/locale to US English.
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Set EDITOR to vim if installed, otherwise use vi (which is available
 # pretty much everywhere).
 if [ "$(command -v vim)" ]; then
