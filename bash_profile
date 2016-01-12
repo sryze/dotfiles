@@ -1,6 +1,4 @@
 # ~/.bash_profile: executed by the command interpreter for login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 #
 # This file is NOT executed by the graphical login shell!
 # If you want to set environment variables, etc for graphical applications,
