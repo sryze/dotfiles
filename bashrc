@@ -5,8 +5,16 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# Enable colored output in various shell commands.
+alias grep="grep --color=auto"
+if [ "$OSTYPE" == "linux-gnu" ]; then
+    alias ls="ls --color=auto"
+else
+    alias ls="ls -G"
+fi
+
 # The Fuck: https://github.com/nvbn/thefuck
-alias fuck='$(thefuck $(fc -ln -1))'
+alias fuck="$(thefuck $(fc -ln -1))"
 
 # Bash completions for grunt (npm install -g grunt-cli).
 if [ "$(command -v grunt)" ]; then
