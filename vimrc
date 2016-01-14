@@ -1,24 +1,24 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Bundle 'gmarik/Vundle.vim'
-Bundle 'bling/vim-airline'
-Bundle 'DetectIndent'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'eparreno/vim-l9'
-Bundle 'taghighlight', {'pinned': 1}
-Bundle 'ervandew/supertab'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'tpope/vim-fugitive'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'DetectIndent'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'eparreno/vim-l9'
+Plugin 'taghighlight', {'pinned': 1}
+Plugin 'ervandew/supertab'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-fugitive'
 
 " Syntax plugins
-Bundle 'vim-less'
-Bundle 'rust-lang/rust.vim'
+Plugin 'vim-less'
+Plugin 'rust-lang/rust.vim'
 
 " Color schemes
-Bundle 'jonathanfilip/vim-lucius'
-Bundle 'chriskempson/base16-vim'
+Plugin 'jonathanfilip/vim-lucius'
+Plugin 'chriskempson/base16-vim'
 
 syntax on
 filetype on
