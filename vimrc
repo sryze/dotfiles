@@ -2,10 +2,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'gmarik/Vundle.vim'
+Bundle 'bling/vim-airline'
 Bundle 'DetectIndent'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'eparreno/vim-l9'
 Bundle 'taghighlight', {'pinned': 1}
 Bundle 'ervandew/supertab'
@@ -145,6 +145,10 @@ set tags=./tags;/
 
 " Fix curly brace error in C++11 lambdas
 let c_no_curly_error = 1
+
+" Airline settings
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " clang_complete settings
 let g:clang_library_path = '/usr/lib/llvm-3.4/lib'
