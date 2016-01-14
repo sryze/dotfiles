@@ -12,8 +12,9 @@ Bundle 'ervandew/supertab'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-fugitive'
 
-" Syntax support
+" Syntax plugins
 Bundle 'vim-less'
+Bundle 'rust-lang/rust.vim'
 
 " Color schemes
 Bundle 'jonathanfilip/vim-lucius'
