@@ -11,7 +11,7 @@ fi
 
 # Execute .bashrc if it exists.
 # This appears to be not necessary on Linux but some systems don't run .basrc
-# automatically, e.g. Mac OS X. (yeah, I don't like Macs too)
+# automatically, e.g. Mac OS X. (yeah, I don't like Macs too).
 if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
 fi

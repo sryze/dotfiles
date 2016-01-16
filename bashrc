@@ -62,7 +62,7 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
-# Execute command from a local .bashrc if exists.
+# Execute commands from a local .bashrc if exists.
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
 fi
