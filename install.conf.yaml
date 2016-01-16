@@ -8,6 +8,7 @@
     ~/.gitignore: gitignore
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim/
+    ~/.config/nvim: vim/
     ~/.vimrc: vimrc
 
 - shell:
