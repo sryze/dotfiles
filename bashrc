@@ -14,7 +14,9 @@ else
 fi
 
 # The Fuck: https://github.com/nvbn/thefuck
-alias fuck="$(thefuck $(fc -ln -1))"
+if [ "$(command -v thefuck)" ]; then
+    alias fuck="$(thefuck $(fc -ln -1))"
+fi
 
 # Bash completions for grunt (npm install -g grunt-cli).
 if [ "$(command -v grunt)" ]; then
