@@ -12,3 +12,5 @@
 	df = diff
 	lg = log -p
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[push]
+	default = matching
