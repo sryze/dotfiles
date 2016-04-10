@@ -2,7 +2,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'DetectIndent'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
