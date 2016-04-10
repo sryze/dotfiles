@@ -64,6 +64,20 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
+# Some handy aliases.
+alias ls='ls -G'
+alias g='git status'
+
+tree_less() {
+    tree -C "$@" | less -RFX
+}
+alias tree='tree_less'
+
+http_less() {
+    http --pretty=all --print=hb "$@" | less -RFX
+}
+alias http='http_less'
+
 # Execute commands from a local .bashrc if exists.
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
