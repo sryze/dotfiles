@@ -67,6 +67,7 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 # Some handy aliases.
 alias ls='ls -G'
 alias g='git status'
+alias ta='tmux attach'
 
 tree_less() {
     tree -C "$@" | less -RFX
