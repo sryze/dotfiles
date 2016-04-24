@@ -32,6 +32,11 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Replace vim with nvim if installed.
+if [[ -n "$(command -v nvim)" ]]; then
+  alias vim='nvim'
+fi
+
 # Set EDITOR to vim if installed, otherwise use vi (which is available
 # pretty much everywhere).
 if [ "$(command -v vim)" ]; then
