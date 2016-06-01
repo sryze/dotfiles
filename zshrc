@@ -53,6 +53,9 @@ eval "$(thefuck --alias)"
 # https://github.com/github/hub
 eval "$(hub alias -s)"
 
+# User shell scripts
+export PATH=$PATH:$HOME/.local/bin
+
 # Python pip packages
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 
