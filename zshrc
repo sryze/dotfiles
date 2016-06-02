@@ -46,14 +46,6 @@ if [[ -n "$(command -v nvim)" ]]; then
   alias vim='nvim'
 fi
 
-# The Fuck: https://github.com/nvbn/thefuck
-# Usage: fuck
-eval "$(thefuck --alias)"
-
-# git + hub = github
-# https://github.com/github/hub
-eval "$(hub alias -s)"
-
 # User shell scripts
 export PATH=$PATH:$HOME/.local/bin
 
