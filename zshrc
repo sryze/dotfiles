@@ -29,6 +29,7 @@ alias ls='ls -G'
 alias g='git status'
 alias gd='git diff'
 alias gl='git log'
+alias groot="cd $(git rev-parse --show-toplevel)"
 
 a() { git add "$@" } 
 c() { git commit "$@" }
