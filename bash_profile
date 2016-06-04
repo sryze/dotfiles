@@ -4,6 +4,9 @@
 # If you want to set environment variables, etc for graphical applications,
 # put that in ~/.profile instead.
 
+# Start ssh-agent on login.
+eval `ssh-agent -s`
+
 # Execute commands from a local .profile if it exists.
 if [ -f ~/.profile.local ]; then
     . ~/.profile.local
