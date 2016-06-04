@@ -5,7 +5,10 @@
 # put that in ~/.profile instead.
 
 # Start ssh-agent on login.
-eval `ssh-agent -s`
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+fi
 
 # Execute commands from a local .profile if it exists.
 if [ -f ~/.profile.local ]; then
