@@ -14,5 +14,6 @@
 	df = diff
 	lg = log -p
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [push]
 	default = simple
