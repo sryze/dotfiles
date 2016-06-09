@@ -66,6 +66,9 @@ if has('gui_running')
   elseif has('gui_win32')
     set columns=160 lines=45
     set guifont=Consolas:h11
+  elseif has('gui_macvim')
+    set columns=160 lines=45
+    set guifont=Source\ Code\ Pro:h13
   endif
 else
   colorscheme lucius
@@ -98,8 +101,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tab management and navigation
-nnoremap <C-S-T> <Esc>:tabnew<CR>
-nnoremap <C-S-W> <Esc>:tabclose<CR>
+"nnoremap <C-S-T> <Esc>:tabnew<CR>
+"nnoremap <C-S-W> <Esc>:tabclose<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
