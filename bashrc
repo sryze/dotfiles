@@ -70,7 +70,6 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 # Some handy aliases.
-alias ls='ls -G'
 alias g='git status'
 alias ta='tmux attach'
 
