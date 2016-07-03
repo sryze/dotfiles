@@ -16,6 +16,7 @@ Plugin 'tpope/vim-fugitive'
 " Syntax plugins
 Plugin 'vim-less'
 Plugin 'rust-lang/rust.vim'
+Plugin 'keith/swift.vim'
 
 " Color schemes
 Plugin 'jonathanfilip/vim-lucius'
