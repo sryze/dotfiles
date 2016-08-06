@@ -27,3 +27,6 @@ cscope.out
 
 # Local IntelliJ IDEA files
 .idea
+
+# NTFS-3G gibberish
+.fuse_hidden*
