@@ -1,7 +1,6 @@
 [include]
 	path = .gitconfig.local
 [core]
-	editor = vim -f
 	excludesfile = ~/.gitignore
 	pager = diff-highlight | less
 [color]
