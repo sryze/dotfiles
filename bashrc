@@ -5,6 +5,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# History search with Up/Down keys.
+bind '"\eOA": history-search-backward'
+bind '"\e[A": history-search-backward'
+bind '"\eOB": history-search-forward'
+bind '"\e[B": history-search-forward'
+
 # Enable colored output in various shell commands.
 alias grep="grep --color=auto"
 if [ "$OSTYPE" == "linux-gnu" ]; then
