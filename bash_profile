@@ -4,20 +4,10 @@
 # If you want to set environment variables, etc for graphical applications,
 # put that in ~/.profile instead.
 
-# Start ssh-agent on login.
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval `ssh-agent -s`
-  ssh-add
+if [ -f "$HOME/.profile" ]; then
+    . "$HOME/.profile"
 fi
 
-# Execute commands from a local .profile if it exists.
-if [ -f ~/.profile.local ]; then
-    . ~/.profile.local
-fi
-
-# Execute .bashrc if it exists.
-# This appears to be not necessary on Linux but some systems don't run .basrc
-# automatically, e.g. Mac OS X. (yeah, I don't like Macs too).
 if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
 fi
