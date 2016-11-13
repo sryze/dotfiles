@@ -59,12 +59,6 @@ if [ "$TERM" != "linux" ]; then
   export TERM="xterm-256color"
 fi
 
-# Linuxbrew: https://github.com/Homebrew/linuxbrew
-# (for installing latest versions of some tools).
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
 # Some handy aliases.
 alias g='git status'
 alias ta='tmux attach'
