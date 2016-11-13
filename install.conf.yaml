@@ -11,6 +11,7 @@
     ~/.vim: vim/
     ~/.config/nvim: vim/
     ~/.vimrc: vimrc
+    ~/.atom/styles.less: atom/styles.less
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

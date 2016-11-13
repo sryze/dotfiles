@@ -1,0 +1,30 @@
+"*":
+  build:
+    minimizedHeight: 0.4
+    overrideThemeColors: false
+  core:
+    disabledPackages: [
+      "highlight-selected"
+      "minimap-highlight-selected"
+      "spell-check"
+    ]
+    telemetryConsent: "no"
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "Source Code Pro"
+    invisibles: {}
+    tabLength: 4
+  "exception-reporting":
+    userId: "cbf48d31-492a-12e4-8a19-31f03b1ea8a1"
+  "git-log": {}
+  "git-projects": {}
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+  tabs:
+    addNewTabsAtEnd: true
+    enableVcsColoring: true
+  welcome:
+    showOnStartup: false

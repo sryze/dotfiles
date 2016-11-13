@@ -1,0 +1,33 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+atom-text-editor::shadow .comment {
+  font-style: normal;
+}
+
+.editor {
+  -webkit-text-stroke: .03em;
+}
+
+@font-size: 13.5px;
+html, body, .tree-view, .tab-bar .tab {
+  font-size: @font-size;
+}
+
+.settings-view {
+  .settings-panel label,
+  .breadcrumb,
+  .setting-title,
+  .package-card
+  .package-readme {
+    font-size: 1rem;
+  }
+}
+
