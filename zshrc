@@ -30,6 +30,7 @@ alias g='git status'
 alias gd='git diff'
 alias gl='git log'
 alias groot="cd \$(git rev-parse --show-toplevel)"
+alias ip='ifconfig | grep 192\.168\.'
 
 a() { git add "$@" } 
 c() { git commit "$@" }
