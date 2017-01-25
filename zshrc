@@ -50,17 +50,6 @@ fi
 # User shell scripts
 export PATH=$PATH:$HOME/.local/bin
 
-# Python pip packages
-export PATH=$PATH:$HOME/Library/Python/2.7/bin
-
-# Infer: https://github.com/facebook/infer
-export PATH=$PATH:$HOME/infer-osx-v0.4.0/infer/bin
-
-# Rust
-export PATH=$PATH:$HOME/.cargo/bin
-export RUST_SRC_PATH=$HOME/rust/src
-
-# Android
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
