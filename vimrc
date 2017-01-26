@@ -72,9 +72,13 @@ if has('gui_running')
     set guifont=Source\ Code\ Pro:h13
   endif
 else
+  set t_Co=256
+  set background=dark
   colorscheme lucius
-  hi Normal  ctermbg=none
-  hi NonText ctermbg=none
+  if substitute(system("uname -s"), '\n', '', '') != "Darwin"
+    hi Normal ctermbg=none
+    hi NonText ctermbg=none
+  endif
 endif
 
 " Fix for backspace
