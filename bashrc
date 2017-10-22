@@ -62,6 +62,7 @@ fi
 # Some handy aliases.
 alias g='git status'
 alias ta='tmux attach'
+alias groot='cd "$(git rev-parse --show-toplevel)"'
 
 tree_less() {
   tree -C "$@" | less -RFX
