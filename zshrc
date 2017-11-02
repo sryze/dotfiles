@@ -2,7 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="materialshell"
 
 # Which plugins would you like to load? (plugins can be found in $ZSH/plugins/*)
 plugins=(git brew tmux)
