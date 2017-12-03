@@ -1,8 +1,16 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+# Fix annoying window renaming in tmux on Fedora.
+export PROMPT_COMMAND=
+
 # Enable programmable completion features.
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if ! shopt -oq posix; then
+  if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  fi
 fi
 
 # History search with Up/Down keys.
