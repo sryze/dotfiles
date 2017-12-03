@@ -2,9 +2,9 @@
 	path = .gitconfig.local
 [core]
 	excludesfile = ~/.gitignore
-	pager = diff-highlight | less
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
-	ui = auto
+	ui = true
 [alias]
 	re = rebase
 	st = status
@@ -12,7 +12,7 @@
 	br = branch
 	co = checkout
 	cp = cherry-pick
-	df = diff
+	patch = !git --no-pager diff --no-color
 	lg = log -p
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
@@ -29,3 +29,15 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
