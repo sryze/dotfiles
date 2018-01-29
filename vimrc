@@ -4,7 +4,6 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'DetectIndent'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'eparreno/vim-l9'
@@ -12,6 +11,7 @@ Plugin 'taghighlight', {'pinned': 1}
 Plugin 'ervandew/supertab'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sleuth'
 
 " Syntax plugins
 Plugin 'vim-less'
@@ -133,9 +133,6 @@ function! AdjustWindowHeight(minheight, maxheight)
   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 endfunction
 
-" Detect indentation settings
-autocmd BufReadPost * :DetectIndent
-
 " Commands to quickly switch between popular indentation styles
 command! -nargs=0 T4  :set noexpandtab | :set tabstop=4 | :set shiftwidth=4
 command! -nargs=0 T4s :set expandtab | :set tabstop=4 | :set shiftwidth=4
@@ -159,6 +156,7 @@ let c_no_curly_error = 1
 " Airline settings
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
+let g:airline#extensions#whitespace#max_lines = 1000
 
 " clang_complete settings
 let g:clang_library_path = '/usr/lib/llvm-3.4/lib'
