@@ -53,18 +53,24 @@ fi
 # Install powerline with 'pip install --user powerline-status'.
 if [ -z "$SSH_CLIENT" ] && [ "$TERM" != "linux" ]; then
   if [ "$(command -v powerline-daemon)" ]; then
-   	export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
-   	export POWERLINE_BASH_CONTINUATION=1
-   	export POWERLINE_BASH_SELECT=1
-   	powerline-daemon -q
-   	. "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
+    export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
+    export POWERLINE_BASH_CONTINUATION=1
+    export POWERLINE_BASH_SELECT=1
+    powerline-daemon -q
+    . "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
   fi
 fi
 
 # Tell the world that we can do 256 colors.
 # This is needed for tmux and possibly other things that I can't remember.
-if [ "$TERM" != "linux" ]; then
+if [ "$TERM" != "linux" ] && [ "$(uname -o)" != "Msys" ]; then
   export TERM="xterm-256color"
+fi
+
+# Git Bash's PS1 contains a call to __git_ps1 which is way too slow (it's
+# the thing that prints the current git branch).
+if [ "$(uname -o)" = "Msys" ]; then
+  export PS1="\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ "
 fi
 
 # Some handy aliases.
