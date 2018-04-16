@@ -6,10 +6,15 @@ export PROMPT_COMMAND=
 # Enable programmable completion features.
 if ! shopt -oq posix; then
   if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
+  fi
+  if [ $(uname -s) = "Darwin" ] && [[ -n "$(command -v brew)" ]]; then
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      source $(brew --prefix)/etc/bash_completion
+    fi
   fi
 fi
 
@@ -57,19 +62,19 @@ if [ -z "$SSH_CLIENT" ] && [ "$TERM" != "linux" ]; then
     export POWERLINE_BASH_CONTINUATION=1
     export POWERLINE_BASH_SELECT=1
     powerline-daemon -q
-    . "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
+    source "$POWERLINE_ROOT/powerline/bindings/bash/powerline.sh"
   fi
 fi
 
 # Tell the world that we can do 256 colors.
 # This is needed for tmux and possibly other things that I can't remember.
-if [ "$TERM" != "linux" ] && [ "$(uname -o)" != "Msys" ]; then
+if [ "$TERM" != "linux" ] && [ $(uname -s) != MINGW* ]; then
   export TERM="xterm-256color"
 fi
 
 # Git Bash's PS1 contains a call to __git_ps1 which is way too slow (it's
 # the thing that prints the current git branch).
-if [ "$(uname -o)" = "Msys" ]; then
+if [ $(uname -s) = MINGW* ]; then
   export PS1="\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ "
 fi
 
