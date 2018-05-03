@@ -5,7 +5,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'eparreno/vim-l9'
 Plugin 'taghighlight', {'pinned': 1}
 Plugin 'ervandew/supertab'
