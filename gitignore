@@ -30,6 +30,7 @@ cscope.out
 
 # NTFS-3G gibberish
 .fuse_hidden*
+._*
 
 # Visual Studio Code
 .vscode
