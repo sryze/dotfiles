@@ -19,10 +19,12 @@ if ! shopt -oq posix; then
 fi
 
 # History search with Up/Down keys.
-bind '"\eOA": history-search-backward'
-bind '"\e[A": history-search-backward'
-bind '"\eOB": history-search-forward'
-bind '"\e[B": history-search-forward'
+if [[ $- == *i* ]]; then
+  bind '"\eOA": history-search-backward'
+  bind '"\e[A": history-search-backward'
+  bind '"\eOB": history-search-forward'
+  bind '"\e[B": history-search-forward'
+fi
 
 # Enable colored output in various shell commands.
 alias grep="grep --color=auto"
