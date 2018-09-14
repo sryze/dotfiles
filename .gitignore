@@ -1,2 +1,4 @@
-vim/bundle/
-vim/plugged/
+/tmux/plugins/
+/tmux/resurrect/
+/vim/bundle/
+/vim/plugged/
