@@ -1,5 +1,3 @@
-[include]
-	path = .gitconfig.local
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
@@ -30,3 +28,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[include]
+	path = .gitconfig.local
