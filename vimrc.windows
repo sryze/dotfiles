@@ -115,3 +115,7 @@ set tags=./tags;/
 
 " Fix curly brace error in C++11 lambdas
 let c_no_curly_error = 1
+
+if filereadable($HOME."/.vimrc.local")
+  exec "source ".$HOME."/.vimrc.local"
+endif
