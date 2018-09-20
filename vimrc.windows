@@ -6,7 +6,6 @@ set backspace=indent,eol,start
 set nobackup
 set nowrap
 set noautochdir
-set cursorline
 set number
 set ignorecase
 set smartcase
@@ -27,6 +26,8 @@ set splitright
 set linespace=2
 
 if has('gui_running')
+  set cursorline
+
   set guioptions-=T
   set guioptions-=m
   set guioptions-=r
