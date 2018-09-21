@@ -24,8 +24,7 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'chriskempson/base16-vim'
 
 syntax on
-filetype on
-
+set background=dark
 set nocompatible
 set nobackup
 set nowrap
@@ -50,17 +49,14 @@ set splitbelow
 set splitright
 set linespace=2
 
-set guioptions-=T
-set guioptions-=m
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-set guitablabel=%N:%M%t
-
-set background=dark
-
 if has('gui_running')
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=l
+  set guioptions-=L
+  set guitablabel=%N:%M%t
   colorscheme base16-ocean
   if has('gui_gtk2')
     set columns=150 lines=43
