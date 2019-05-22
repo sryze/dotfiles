@@ -18,6 +18,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-less'
 Plugin 'rust-lang/rust.vim'
 Plugin 'keith/swift.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Color schemes
 Plugin 'jonathanfilip/vim-lucius'
@@ -142,6 +144,7 @@ autocmd BufRead,BufNewFile,BufWritePost *.gyp,*.gypi set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.h++ set filetype=cpp
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
+autocmd BufReadPost *.handlebars set syntax=mustache
 
 " Set search path for ctags database
 " http://stackoverflow.com/a/741486/249230
