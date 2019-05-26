@@ -120,6 +120,9 @@ if [ $(uname -o) = Msys ]; then
   }
 fi
 
+# Remove ugly background color from directories in in ls output.
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+
 # Some handy aliases.
 alias g='git status'
 alias ta='tmux attach'
