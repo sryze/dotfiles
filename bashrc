@@ -27,11 +27,12 @@ if [[ $- == *i* ]]; then
 fi
 
 # Enable colored output in various shell commands.
-alias grep="grep --color=auto"
 if [ "$OSTYPE" == "linux-gnu" ]; then
-    alias ls="ls --color=auto"
+  export LS_OPTIONS='--color=auto'
+  export GREP_OPTIONS='--color=auto'
 else
-    alias ls="ls -G"
+  alias ls='ls -G'
+  alias grep='grep --color=auto'
 fi
 
 # Set PATH so it includes user's private bin if it exists.
