@@ -111,7 +111,7 @@ fi
 
 # Git Bash's PS1 contains a call to __git_ps1 which is way too slow (it's
 # the thing that prints the current git branch).
-if [ $(uname -o) = Msys ]; then
+if [ $(uname -s) = MINGW* ]; then
   export PS1="\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ "
 
   # https://github.com/docker/toolbox/issues/673
