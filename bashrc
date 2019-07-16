@@ -127,6 +127,7 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 alias g='git status'
 alias ta='tmux attach'
 alias groot='cd "$(git rev-parse --show-toplevel)"'
+alias dc='docker-compose'
 
 tree_less() {
   tree -C "$@" | less -RFX
