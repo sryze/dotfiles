@@ -37,3 +37,6 @@ cscope.out
 
 # Visual Studio Code
 .vscode
+
+# Syncthing
+.stignore
