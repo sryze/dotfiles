@@ -124,6 +124,9 @@ fi
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Some handy aliases.
+alias ll='ls -l'
+alias la='ls -a'
+alias lal='ls -al'
 alias g='git status'
 alias ta='tmux attach'
 alias groot='cd "$(git rev-parse --show-toplevel)"'
