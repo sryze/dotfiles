@@ -62,7 +62,7 @@ if has('gui_running')
   colorscheme base16-ocean
   if has('gui_gtk2')
     set columns=150 lines=43
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 10
   elseif has('gui_win32')
     set columns=160 lines=45
     set guifont=Consolas:h11
