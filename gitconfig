@@ -11,7 +11,7 @@
 	br = branch
 	co = checkout
 	cp = cherry-pick
-	patch = !git --no-pager diff --no-color
+	rez = reset --hard @{upstream}
 	lg = log -p
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
