@@ -12,7 +12,7 @@
 	co = checkout
 	cp = cherry-pick
 	rez = reset --hard @{upstream}
-  log1 = log --pretty=oneline
+	log1 = log --pretty=oneline
 	log2 = log -p
 	log3 = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
