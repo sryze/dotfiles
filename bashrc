@@ -60,8 +60,8 @@ fi
 # Install powerline with 'pip install --user powerline-status'.
 using_powerline=
 if [ -z "$SSH_CLIENT" ] && [ "$TERM" != "linux" ]; then
-  if [ "$(command -v powerline-daemon)" ]; then
-    export POWERLINE_ROOT="$HOME/.local/lib/python2.7/site-packages"
+  export POWERLINE_ROOT=$(python3 -m site --user-site)
+  if [ -d "$POWERLINE_ROOT" ]; then
     export POWERLINE_BASH_CONTINUATION=1
     export POWERLINE_BASH_SELECT=1
     powerline-daemon -q
