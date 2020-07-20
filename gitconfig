@@ -20,6 +20,8 @@
 	useconfigonly = true
 [merge]
 	conflictstyle = diff3
+[pull]
+	ff = only
 [push]
 	default = simple
 [rerere]
