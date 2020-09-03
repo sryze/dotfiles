@@ -5,7 +5,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'eparreno/vim-l9'
 Plugin 'taghighlight', {'pinned': 1}
 Plugin 'ervandew/supertab'
@@ -96,7 +96,7 @@ if has("win32")
 endif
 
 " Open directory tree
-nnoremap <C-T> :NERDTreeTabsToggle<CR>
+nnoremap <C-\> :NERDTreeTabsToggle<CR>
 
 " Navigate more easily between splits
 nnoremap <C-J> <C-W><C-J>
@@ -105,17 +105,17 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tab management and navigation
-"nnoremap <C-S-T> <Esc>:tabnew<CR>
-"nnoremap <C-S-W> <Esc>:tabclose<CR>
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
-noremap <Leader>7 7gt
-noremap <Leader>8 8gt
-noremap <Leader>9 9gt
+noremap <C-T> <Esc>:tabnew<CR>
+noremap <C-W> <Esc>:tabclose<CR>
+noremap <M-1> 1gt
+noremap <M-2> 2gt
+noremap <M-3> 3gt
+noremap <M-4> 4gt
+noremap <M-5> 5gt
+noremap <M-6> 6gt
+noremap <M-7> 7gt
+noremap <M-8> 8gt
+noremap <M-9> 9gt
 
 " Search for the visually selected sequence of characters 
 vnoremap g/ y/<C-R>"<CR>
