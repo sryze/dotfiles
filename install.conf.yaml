@@ -15,6 +15,7 @@
     ~/.vimrc: vimrc
     ~/.atom/styles.less: atom/styles.less
     ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.my.cnf: my.cnf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
