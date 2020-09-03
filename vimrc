@@ -65,7 +65,7 @@ if has('gui_running')
     set guifont=Source\ Code\ Pro\ 11
   elseif has('gui_win32')
     set columns=180 lines=50
-    set guifont=Source\ Code\ Pro:h11
+    set guifont=Source\ Code\ Pro\ Medium:h11
   elseif has('gui_macvim')
     set columns=160 lines=45
     set guifont=Source\ Code\ Pro:h13
@@ -78,6 +78,9 @@ else
     hi Normal ctermbg=none
     hi NonText ctermbg=none
   endif
+endif
+if has('nvim')
+  set guifont=Source\ Code\ Pro:h11
 endif
 
 " Fix for backspace
