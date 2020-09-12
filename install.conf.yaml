@@ -11,7 +11,8 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.vim: vim/
-    ~/.config/nvim: vim/
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/site/autoload/plug.vim: nvim/site/autoload/plug.vim
     ~/.vimrc: vimrc
     ~/.atom/styles.less: atom/styles.less
     ~/.atom/keymap.cson: atom/keymap.cson

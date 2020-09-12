@@ -179,13 +179,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-if filereadable($HOME."/.vimrc.local")
-  exec "source ".$HOME."/.vimrc.local"
-endif
-
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|.*\.class)$'
 nnoremap <M-b> :CtrlPBuffer<CR>
+
+if filereadable($HOME."/.vimrc.local")
+  exec "source ".$HOME."/.vimrc.local"
+endif

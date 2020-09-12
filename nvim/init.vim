@@ -1,8 +1,9 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'eparreno/vim-l9'
 Plug 'vim-scripts/taghighlight', {'pinned': 1}
 Plug 'ervandew/supertab'
@@ -16,6 +17,8 @@ Plug 'neomake/neomake'
 Plug 'vim-scripts/vim-less'
 Plug 'rust-lang/rust.vim'
 Plug 'keith/swift.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mustache/vim-mustache-handlebars'
 
 " Color schemes
 Plug 'jonathanfilip/vim-lucius'
@@ -23,6 +26,7 @@ Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
+set background=dark
 set nocompatible
 set nobackup
 set nowrap
@@ -47,24 +51,21 @@ set splitbelow
 set splitright
 set linespace=2
 
-set guioptions-=T
-set guioptions-=m
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-set guitablabel=%N:%M%t
-
-set background=dark
-
 if has('gui_running')
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=l
+  set guioptions-=L
+  set guitablabel=%N:%M%t
   colorscheme base16-ocean
   if has('gui_gtk2')
     set columns=150 lines=43
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+    set guifont=Source\ Code\ Pro\ 11
   elseif has('gui_win32')
-    set columns=160 lines=45
-    set guifont=Consolas:h11
+    set columns=180 lines=50
+    set guifont=Source\ Code\ Pro\ Medium:h11
   elseif has('gui_macvim')
     set columns=160 lines=45
     set guifont=Source\ Code\ Pro:h13
@@ -77,6 +78,9 @@ else
     hi Normal ctermbg=none
     hi NonText ctermbg=none
   endif
+endif
+if has('nvim')
+  set guifont=Source\ Code\ Pro:h11
 endif
 
 " Fix for backspace
@@ -95,7 +99,7 @@ if has("win32")
 endif
 
 " Open directory tree
-nnoremap <C-T> :NERDTreeTabsToggle<CR>
+nnoremap <C-\> :NERDTreeTabsToggle<CR>
 
 " Navigate more easily between splits
 nnoremap <C-J> <C-W><C-J>
@@ -104,17 +108,17 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tab management and navigation
-"nnoremap <C-S-T> <Esc>:tabnew<CR>
-"nnoremap <C-S-W> <Esc>:tabclose<CR>
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
-noremap <Leader>7 7gt
-noremap <Leader>8 8gt
-noremap <Leader>9 9gt
+noremap <C-T> <Esc>:tabnew<CR>
+noremap <C-W> <Esc>:tabclose<CR>
+noremap <M-1> 1gt
+noremap <M-2> 2gt
+noremap <M-3> 3gt
+noremap <M-4> 4gt
+noremap <M-5> 5gt
+noremap <M-6> 6gt
+noremap <M-7> 7gt
+noremap <M-8> 8gt
+noremap <M-9> 9gt
 
 " Search for the visually selected sequence of characters 
 vnoremap g/ y/<C-R>"<CR>
@@ -143,6 +147,7 @@ autocmd BufRead,BufNewFile,BufWritePost *.gyp,*.gypi set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.h++ set filetype=cpp
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
+autocmd BufReadPost *.handlebars set syntax=mustache
 
 " Set search path for ctags database
 " http://stackoverflow.com/a/741486/249230
@@ -168,6 +173,7 @@ let g:clang_complete_macros = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
