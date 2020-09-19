@@ -120,6 +120,12 @@ noremap <M-7> 7gt
 noremap <M-8> 8gt
 noremap <M-9> 9gt
 
+" Moving between window splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Search for the visually selected sequence of characters 
 vnoremap g/ y/<C-R>"<CR>
 
