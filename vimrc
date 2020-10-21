@@ -108,8 +108,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tab management and navigation
-noremap <C-T> <Esc>:tabnew<CR>
-noremap <C-W> <Esc>:tabclose<CR>
+noremap <C-T><C-T> <Esc>:tabnew<CR>
+noremap <C-T><C-W> <Esc>:tabclose<CR>
 noremap <M-1> 1gt
 noremap <M-2> 2gt
 noremap <M-3> 3gt
