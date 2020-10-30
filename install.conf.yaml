@@ -17,6 +17,7 @@
     ~/.atom/styles.less: atom/styles.less
     ~/.atom/keymap.cson: atom/keymap.cson
     ~/.my.cnf: my.cnf
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
