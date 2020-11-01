@@ -105,13 +105,13 @@ fi
 
 # Tell the world that we can do 256 colors.
 # This is needed for tmux and possibly other things that I can't remember.
-if [ "$TERM" != "linux" ] && [ $(uname -s) != MINGW* ]; then
+if [ "$TERM" != "linux" ] && [ -z $(uname -s | grep MINGW) ]; then
   export TERM="xterm-256color"
 fi
 
 # Git Bash's PS1 contains a call to __git_ps1 which is way too slow (it's
 # the thing that prints the current git branch).
-if [ $(uname -s) = MINGW* ]; then
+if [ $(uname -s | grep MINGW) ]; then
   export PS1="\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ "
 
   # https://github.com/docker/toolbox/issues/673
