@@ -101,6 +101,9 @@ endif
 " Open directory tree
 nnoremap <C-\> :NERDTreeTabsToggle<CR>
 
+" Save current file
+nnoremap <C-S> <Esc>:w!<CR>
+
 " Navigate more easily between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -110,6 +113,8 @@ nnoremap <C-H> <C-W><C-H>
 " Tab management and navigation
 noremap <C-T><C-T> <Esc>:tabnew<CR>
 noremap <C-T><C-W> <Esc>:tabclose<CR>
+noremap <M-[> gT<CR>
+noremap <M-]> gt<CR>
 noremap <M-1> 1gt
 noremap <M-2> 2gt
 noremap <M-3> 3gt
@@ -176,14 +181,13 @@ let g:clang_user_options = '-std=c++11'
 let g:clang_complete_macros = 1
 
 " Syntactic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
