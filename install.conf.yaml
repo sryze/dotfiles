@@ -14,7 +14,7 @@
     ~/.config/nvim/init.vim:
         create: true
         path: nvim/init.vim
-    ~/.config/nvim/site/autoload/plug.vim: 
+    ~/.local/share/nvim/site/autoload/plug.vim: 
         create: true
         path: nvim/site/autoload/plug.vim
     ~/.vimrc: vimrc
