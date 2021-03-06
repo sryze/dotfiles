@@ -18,10 +18,16 @@
         create: true
         path: nvim/site/autoload/plug.vim
     ~/.vimrc: vimrc
-    ~/.atom/styles.less: atom/styles.less
-    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/styles.less:
+        create: true
+        path: atom/styles.less
+    ~/.atom/keymap.cson:
+        create: true
+        path: atom/keymap.cson
     ~/.my.cnf: my.cnf
-    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/alacritty/alacritty.yml: 
+        create: true
+        path: alacritty/alacritty.yml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
