@@ -35,8 +35,10 @@ cscope.out
 .fuse_hidden*
 ._*
 
-# Visual Studio Code
+# Visual Studio [Code]
+.vs
 .vscode
+CMakeSettings.json
 
 # Syncthing
 .stignore
