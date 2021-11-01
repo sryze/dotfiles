@@ -12,8 +12,8 @@ plugins=(git brew tmux)
 # User configuration
 source $ZSH/oh-my-zsh.sh
 
-unsetopt inc_append_history
-unsetopt share_history
+# unsetopt inc_append_history
+# unsetopt share_history
 
 # Set locale and language to US English.
 export LC_ALL=en_US.UTF-8
