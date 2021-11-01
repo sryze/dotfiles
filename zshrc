@@ -4,6 +4,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Which plugins would you like to load? (plugins can be found in $ZSH/plugins/*)
@@ -24,9 +25,9 @@ export TERM=xterm-256color
 
 # Preferred editor for local and remote sessions.
 if [[ -n "$(command -v nvim)" ]]; then
-  export EDITOR='nvim'
+    export EDITOR='nvim'
 else
-  export EDITOR='vim'
+    export EDITOR='vim'
 fi
 
 # Some handy aliases.
@@ -49,12 +50,12 @@ alias h='httpless'
 
 # Replace vim with nvim if installed.
 if [[ -n "$(command -v nvim)" ]]; then
-  alias vim='nvim'
+    alias vim='nvim'
 fi
 
 # User shell scripts
 export PATH=$PATH:$HOME/.local/bin
 
 if [ -f "$HOME/.zshrc.local" ]; then
-  source "$HOME/.zshrc.local"
+    source "$HOME/.zshrc.local"
 fi

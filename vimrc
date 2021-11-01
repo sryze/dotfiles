@@ -38,9 +38,9 @@ set smartcase
 set incsearch
 set hlsearch
 set ruler
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=8
+set shiftwidth=8
+set noexpandtab
 set colorcolumn=80
 set autoindent
 set preserveindent
@@ -52,35 +52,35 @@ set splitright
 set linespace=2
 
 if has('gui_running')
-  set guioptions-=T
-  set guioptions-=m
-  set guioptions-=r
-  set guioptions-=R
-  set guioptions-=l
-  set guioptions-=L
-  set guitablabel=%N:%M%t
-  colorscheme base16-ocean
-  if has('gui_gtk2')
-    set columns=150 lines=43
-    set guifont=Source\ Code\ Pro\ 11
-  elseif has('gui_win32')
-    set columns=180 lines=50
-    set guifont=Source\ Code\ Pro\ Medium:h11
-  elseif has('gui_macvim')
-    set columns=160 lines=45
-    set guifont=Source\ Code\ Pro:h13
-  endif
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
+    set guitablabel=%N:%M%t
+    colorscheme base16-ocean
+    if has('gui_gtk2')
+        set columns=150 lines=43
+        set guifont=Source\ Code\ Pro\ 11
+    elseif has('gui_win32')
+        set columns=180 lines=50
+        set guifont=Source\ Code\ Pro\ Medium:h11
+    elseif has('gui_macvim')
+        set columns=160 lines=45
+        set guifont=Source\ Code\ Pro\ Medium:h13
+    endif
 else
-  set t_Co=256
-  set background=dark
-  colorscheme lucius
-  if substitute(system("uname -s"), '\n', '', '') != "Darwin"
-    hi Normal ctermbg=none
-    hi NonText ctermbg=none
-  endif
+    set t_Co=256
+    set background=dark
+    colorscheme lucius
+    if substitute(system("uname -s"), '\n', '', '') != "Darwin"
+        hi Normal ctermbg=none
+        hi NonText ctermbg=none
+    endif
 endif
 if has('nvim')
-  set guifont=Source\ Code\ Pro:h11
+    set guifont=Source\ Code\ Pro:h11
 endif
 
 " Fix for backspace
@@ -90,12 +90,12 @@ set backspace=indent,eol,start
 let mapleader = ' '
 
 " One-button compile and run
-nnoremap <F5>  :make<CR>
-nnoremap <F9>  :SCCompile<CR>
+nnoremap <F5>    :make<CR>
+nnoremap <F9>    :SCCompile<CR>
 nnoremap <F10> :SCCompileRun<CR>
 if has("win32")
-  " On Windows we use MinGW's make 
-  set makeprg=mingw32-make
+    " On Windows we use MinGW's make 
+    set makeprg=mingw32-make
 endif
 
 " Open directory tree
@@ -138,20 +138,20 @@ vnoremap g/ y/<C-R>"<CR>
 " location list window, or close it when is has become empty. 
 " (doesn't seem to work...)
 autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+autocmd QuickFixCmdPost        l* nested lwindow
 
 " Automatically adjust quickfix window height
 au FileType qf call AdjustWindowHeight(3, 10)
 function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+    exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 endfunction
 
 " Commands to quickly switch between popular indentation styles
-command! -nargs=0 T4  :set noexpandtab | :set tabstop=4 | :set shiftwidth=4
+command! -nargs=0 T4 :set noexpandtab | :set tabstop=4 | :set shiftwidth=4
 command! -nargs=0 T4s :set expandtab | :set tabstop=4 | :set shiftwidth=4
-command! -nargs=0 T2  :set noexpandtab | :set tabstop=2 | :set shiftwidth=2
+command! -nargs=0 T2 :set noexpandtab | :set tabstop=2 | :set shiftwidth=2
 command! -nargs=0 T2s :set expandtab | :set tabstop=2 | :set shiftwidth=2
-command! -nargs=0 T8  :set noexpandtab | :set tabstop=8 | :set shiftwidth=8
+command! -nargs=0 T8 :set noexpandtab | :set tabstop=8 | :set shiftwidth=8
 
 " Non-standard file extensions
 autocmd BufRead,BufNewFile,BufWritePost *.gyp,*.gypi set filetype=python
@@ -197,5 +197,5 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|.*\.class)$'
 nnoremap <M-b> :CtrlPBuffer<CR>
 
 if filereadable($HOME."/.vimrc.local")
-  exec "source ".$HOME."/.vimrc.local"
+    exec "source ".$HOME."/.vimrc.local"
 endif

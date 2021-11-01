@@ -1,41 +1,40 @@
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
-	autocrlf = false
+    editor = vim
+    excludesfile = ~/.gitignore
 [color]
-	ui = true
+    ui = true
 [alias]
-	re = rebase
-	st = status
-	ci = commit
-	br = branch
-	co = checkout
-	cp = cherry-pick
-	rez = reset --hard @{upstream}
-	log1 = log --pretty=oneline
-	log2 = log -p
-	log3 = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+    re = rebase
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    cp = cherry-pick
+    rez = reset --hard @{upstream}
+    log1 = log --pretty=oneline
+    log2 = log -p
+    log3 = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [user]
-	useconfigonly = true
+    useconfigonly = true
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [fetch]
-	prune = true
+    prune = true
 [pull]
-	ff = only
+    ff = only
 [push]
-	default = simple
+    default = simple
 [rerere]
-	enabled = 1
+    enabled = 1
 [diff]
-	compactionHeuristic = true
+    compactionHeuristic = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [include]
-	path = .gitconfig.local
+    path = .gitconfig.local
 [init]
-	defaultBranch = master
+    defaultBranch = master
