@@ -1,3 +1,5 @@
+[init]
+    defaultBranch = master
 [core]
     editor = vim
     excludesfile = ~/.gitignore
@@ -14,6 +16,7 @@
     log1 = log --pretty=oneline
     log2 = log -p
     log3 = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    history = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short
     serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [user]
     useconfigonly = true
@@ -36,5 +39,5 @@
     required = true
 [include]
     path = .gitconfig.local
-[init]
-    defaultBranch = master
+[include]
+    path = ~/.gitconfig.local
